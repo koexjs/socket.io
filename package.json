@@ -1,0 +1,66 @@
+{
+  "name": "@zcorky/koa-socket.io",
+  "version": "0.0.1",
+  "description": "socket.io for koa",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "repository": "https://github.com/zcorky/koa-socket.io",
+  "author": "Zero",
+  "license": "MIT",
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rimraf -rf lib",
+    "test": "NODE_ENV=test nyc mocha test/*.spec.ts test/**/*.spec.ts --exit --timeout 10000",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.47",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.9.4",
+    "@types/socket.io": "^2.1.0",
+    "@types/socket.io-client": "^1.4.32",
+    "coveralls": "^3.0.2",
+    "koa": "^2.6.2",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "rimraf": "^2.6.2",
+    "should": "^13.2.3",
+    "socket.io-client": "^2.2.0",
+    "source-map-support": "^0.5.9",
+    "supertest": "^3.3.0",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.10.0",
+    "tslint-eslint-rules": "^5.3.1",
+    "tslint-jsdoc-rules": "^0.1.2",
+    "typescript": "^3.2.1"
+  },
+  "files": [
+    "lib/"
+  ],
+  "nyc": {
+    "check-coverage": true,
+    "lines": 60,
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "**/*.d.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register",
+      "source-map-support/register"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "socket.io": "^2.2.0"
+  }
+}
