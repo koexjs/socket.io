@@ -1,7 +1,12 @@
 import * as http from 'http';
 import * as Koa from 'koa';
 import * as SocketIO from 'socket.io';
-import { Server } from 'socket.io';
+import { Server, Socket } from 'socket.io';
+
+export {
+  Socket,
+  Server,
+};
 
 export  interface Application extends Koa {
   io: Server;
