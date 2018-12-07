@@ -1,6 +1,6 @@
 {
   "name": "@zcorky/koa-socket.io",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "socket.io for koa",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -18,7 +18,6 @@
     "@types/koa": "^2.0.47",
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.9.4",
-    "@types/socket.io": "^2.1.0",
     "@types/socket.io-client": "^1.4.32",
     "coveralls": "^3.0.2",
     "koa": "^2.6.2",
