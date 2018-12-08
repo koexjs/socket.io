@@ -16,16 +16,16 @@ export interface Options extends SocketIO.ServerOptions {
   [key: string]: any;
 }
 
-function patch(app: Koa, io: Server) {
+function patch(app: Koa, io: Server, options?: Options) {
   app.listen = function () {
     const server = http.createServer(this.callback());
-    io.attach(server);
+    io.attach(server, options);
     return server.listen.apply(server, arguments);
   }
 }
 
 export default (app: Koa, options?: Options) => {
-  const io: Server = new (SocketIO as any)(options);
-  patch(app, io);
+  const io: Server = SocketIO();
+  patch(app, io, options);
   (app as any).io = io;
 };
