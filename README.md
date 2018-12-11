@@ -1,24 +1,25 @@
-# koa-socket.io
+# socket.io
 
-[![NPM version](https://img.shields.io/npm/v/@zcorky/koa-socket.io.svg?style=flat)](https://www.npmjs.com/package/@zcorky/koa-socket.io)
-[![Coverage Status](https://img.shields.io/coveralls/zcorky/koa-socket.io.svg?style=flat)](https://coveralls.io/r/zcorky/koa-socket.io)
-[![Dependencies](https://david-dm.org/@zcorky/koa-socket.io/status.svg)](https://david-dm.org/@zcorky/koa-socket.io)
-[![Build Status](https://travis-ci.com/zcorky/koa-socket.io.svg?branch=master)](https://travis-ci.com/zcorky/koa-socket.io)
-![license](https://img.shields.io/github/license/zcorky/koa-socket.io.svg)
-[![issues](https://img.shields.io/github/issues/zcorky/koa-socket.io.svg)](https://github.com/zcorky/koa-socket.io/issues)
+[![NPM version](https://img.shields.io/npm/v/@koex/socket.io.svg?style=flat)](https://www.npmjs.com/package/@koex/socket.io)
+[![Coverage Status](https://img.shields.io/coveralls/koexjs/socket.io.svg?style=flat)](https://coveralls.io/r/koexjs/socket.io)
+[![Dependencies](https://img.shields.io/david/koexjs/socket.io.svg)](https://github.com/koexjs/socket.io)
+[![Build Status](https://travis-ci.com/koexjs/socket.io.svg?branch=master)](https://travis-ci.com/koexjs/socket.io)
+![license](https://img.shields.io/github/license/koexjs/socket.io.svg)
+[![issues](https://img.shields.io/github/issues/koexjs/socket.io.svg)](https://github.com/koexjs/socket.io/issues)
 
-> socket.io for Koa
+
+> socket.io for koa extend.
 
 ### Install
 
 ```
-$ npm install @zcorky/koa-socket.io
+$ npm install @koex/socket.io
 ```
 
 ### Usage
 
 ```javascript
-import withSocketIO from '@zcorky/koa-socket.io';
+import withSocketIO from '@koex/socket.io';
 
 import * as Koa from 'koa';
 const app = new Koa();
